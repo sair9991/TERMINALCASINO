@@ -1,3 +1,21 @@
+# `python casino/main.py` loads this file as a script, which has no package.
+# This has to run before any other import: the script directory is placed
+# first on sys.path, and casino/types.py would otherwise shadow the
+# standard-library types module.
+if __name__ == "__main__" and __package__ in {None, ""}:
+    import os
+    import sys
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.dirname(script_dir)
+    sys.path = [
+        entry
+        for entry in sys.path
+        if not entry or os.path.abspath(entry) != script_dir
+    ]
+    sys.path.insert(0, repo_root)
+    __package__ = "casino"
+
 import shutil
 from typing import Callable
 
