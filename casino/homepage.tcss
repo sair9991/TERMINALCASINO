@@ -1,0 +1,82 @@
+/* Terminal Casino homepage. */
+
+NameScreen, GameSelectScreen {
+    align: center middle;
+}
+
+#banner {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-style: bold;
+    color: #ffd700;
+}
+
+#prompt {
+    width: 100%;
+    height: auto;
+    margin: 1 0;
+    text-align: center;
+}
+
+#welcome {
+    width: 100%;
+    height: auto;
+    margin: 1 0 0 0;
+    text-align: center;
+    color: #5fd7ff;
+    text-style: bold;
+}
+
+#name-wrap {
+    width: 100%;
+    height: auto;
+    align-horizontal: center;
+}
+
+#name-column {
+    width: 46;
+    height: auto;
+}
+
+#name-input {
+    width: 100%;
+    margin: 0 0 1 0;
+}
+
+#games-wrap {
+    width: 100%;
+    height: auto;
+    margin: 1 0 0 0;
+    align-horizontal: center;
+}
+
+#games {
+    width: 54;
+    height: auto;
+    layout: grid;
+    grid-size: 2;
+    grid-gutter: 1 2;
+}
+
+.game-button {
+    width: 100%;
+}
+
+#actions {
+    height: auto;
+    margin-top: 1;
+}
+
+#name-column #actions {
+    width: 100%;
+}
+
+#games-wrap #actions {
+    width: 54;
+}
+
+#actions Button {
+    width: 1fr;
+    margin-right: 1;
+}
